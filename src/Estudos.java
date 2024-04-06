@@ -10,7 +10,6 @@ public class Estudos {
 
         System.out.println("""
         
-        /*
         boolean (true ou false)
         byte (8 bits, -128 a 127)
         char (caracteres individuais, qualquer Unicode, precisa de aspas simples '')
@@ -19,7 +18,6 @@ public class Estudos {
         long (64 bits, -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807)
         float (32 bits, até 7 digitos de precisão)
         double (64 bits, até 15 digitos de precisão)
-        */
         
         
         

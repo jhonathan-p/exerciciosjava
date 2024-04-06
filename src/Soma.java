@@ -1,9 +1,9 @@
 public class Soma {
     public static void main(String[] args) {
 
-        int primeironumero = 10;
-        int segundonumero = 5;
-        System.out.println(primeironumero + segundonumero);
+        int primeiroNumero = 10;
+        int segundoNumero = 5;
+        System.out.println(primeiroNumero + segundoNumero);
 
     }
 }
