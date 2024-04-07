@@ -108,6 +108,74 @@ public class Estudos {
                               Teremos %d aulas para te mostrar o que é preciso para você dar o seu primeiro mergulho na linguagem!
                               \""".formatted(nome, aulas);
             System.out.println(mensagem);
+            
+            
+            
+        if exemplo:    
+            if (numeroSecreto == numeroDigitado) {
+                System.out.println("Você acertou! Tentativas: " + i);
+                break;
+            } else if (numeroSecreto < numeroDigitado) {
+                System.out.println("O número secreto é menor. Tentativas: " + i);
+            } else {
+                System.out.println("O número secreto é maior. Tentativas: " + i);
+            }
+            
+            
+            
+        Switch case exemplo:
+            int dia = 3;
+            String nomeDia;
+                    
+            switch (dia) {
+               case 1:
+                  nomeDia = "domingo";
+                  break;
+               case 2:
+                  nomeDia = "segunda-feira";
+                  break;
+               case 3:
+                  nomeDia = "terça-feira";
+                  break;
+               case 4:
+                  nomeDia = "quarta-feira";
+                  break;
+               case 5:
+                  nomeDia = "quinta-feira";
+                  break;
+               case 6:
+                  nomeDia = "sexta-feira";
+                  break;
+               case 7:
+                  nomeDia = "sábado";
+                  break;
+               default:
+                  nomeDia = "Dia inválido";
+                  break;
+            }
+        
+        
+        
+        Sintaxe do for loop:
+            for (int i = 0; i < VALOR; i++) {                        
+            }    
+        
+        
+        
+        Sintaxe do while loop:
+            while (condição) {
+            }    
+            
+            
+            
+        Scanner (input):                
+            import java.util.Scanner;
+            
+            Scanner variavel = new Scanner(System.in);
+                                
+            String nome = variavel.nextLine();
+            int numero = variavel.nextInt();
+            double flutuante = variavel.nextDouble();
 
 
 
