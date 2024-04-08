@@ -179,6 +179,17 @@ public class Estudos {
 
 
 
+        Modificadores de acesso: public, protected, private e default (package-private).
+        
+        
+        
+        Packages servem para organizar melhor o código. Dependendo do uso é necessário importar a package assim como declara-la.            
+            package pacote.subpacote;
+            import pacote.subpacote.Classe(ou * para tudo);
+        É praticamente uma pasta dentro de outra pasta.
+        
+
+
         Nomes de classes devem começar com letra maiúscula e usar a convenção PascalCase (também conhecida como Upper CamelCase).
         Exemplo: MinhaClasse.
 
