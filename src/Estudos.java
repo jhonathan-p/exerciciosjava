@@ -181,12 +181,22 @@ public class Estudos {
 
         Modificadores de acesso: public, protected, private e default (package-private).
         
+        Getters e Setters vão ser muito usados quando um atributo de uma classe for declarado como private.
+        O atributo pode ser declarado como protected, permitindo que outras classes alterem diretamente o atributo sem a necessidade de passar por uma possível lógica dos getters e setters.
+        protected = acesso no mesmo pacote ou sub classes.
+        
         
         
         Packages servem para organizar melhor o código. Dependendo do uso é necessário importar a package assim como declara-la.            
             package pacote.subpacote;
             import pacote.subpacote.Classe(ou * para tudo);
         É praticamente uma pasta dentro de outra pasta.
+        A convenção é usar o domínio ao contrário. Exemplo: br.com.exemplo
+        
+        
+        
+        Herança: Herda atributos e métodos de outra classe, é possível também fazer @Override de métodos. @Deprecated indica métodos ou classes obsoletas.
+            public class SubClass extends SuperClass {
         
 
 
