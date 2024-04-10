@@ -197,6 +197,13 @@ public class Estudos {
         
         Herança: Herda atributos e métodos de outra classe, é possível também fazer @Override de métodos. @Deprecated indica métodos ou classes obsoletas.
             public class SubClass extends SuperClass {
+            
+        Além de Classes existem Inferfaces. Diferente da Classe onde uma subclasse pode ou não utilizar todos os métodos herdados.
+        As interfaces DEVEM implementar todos os métodos.
+            public class SubClass extends SuperClass implements Interface {
+        
+        Classes que usam métodos de interface que não são objetos não precisam implementar a interface, pois quem vai implementar vai ser o objeto onde a classe foi usada.
+        Exemplo: Usar no Main um método de uma SubSlasse que implementou a interface. Não é necessário implementar a interface no Main. 
         
 
 
