@@ -205,7 +205,42 @@ public class Estudos {
         Classes que usam métodos de interface que não são objetos não precisam implementar a interface, pois quem vai implementar vai ser o objeto onde a classe foi usada.
         Exemplo: Usar no Main um método de uma SubSlasse que implementou a interface. Não é necessário implementar a interface no Main. 
         
-
+        
+        
+        ArrayList e array são coisas diferentes.
+        Arrays tem tamanho fixo, e não possuem métodos. Exemplo:
+            int[] numeros = new int[5]; //Cria o array. Ele vai de 0 até 4.        
+            for (int i = 0; i < numeros.length; i++) {     //Preenche o array
+                numeros[i] = i + 1;
+            }
+                    
+        Ele pode ser também de objetos:
+            Filme[] filmes = new Filme[2];                    
+            Filme filme1 = new Filme("Avatar", 2009);
+            Filme filme2 = new Filme("Dogville", 2003);            
+            filmes[0] = filme1;
+            filmes[1] = filme2;
+            
+        Pelo visto é comum sobrescrever o método toString() para melhorar a visualização do ArrayList. Exemplo:        
+            @Override
+            public String toString() {
+                return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
+            }
+        
+        Métodos muito utilizados: add(), size(), get(), toString().
+        
+        
+        
+        
+        A partir do Java 10 é possível declarar variáveis com "var". O compilador infire automaticamente o tipo da variável com base no valor atribuído a ela.
+        Exemplo: var numero = 10; //O compilardor vai atribuir int.
+        
+        Limitações: 
+        Não é possível utilizar var em variáveis cujo tipo não possa ser inferido automaticamente.                           
+        Não é possível usar var em variáveis sem valor inicial. É necessário atribuir um valor à variável na mesma linha em que ela é declarada.
+        
+        
+        
 
         Nomes de classes devem começar com letra maiúscula e usar a convenção PascalCase (também conhecida como Upper CamelCase).
         Exemplo: MinhaClasse.
