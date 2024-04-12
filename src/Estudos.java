@@ -84,6 +84,16 @@ public class Estudos {
             } else {
                 System.out.println("Senha incorreta.");
             }
+        Já nesse outro exemplo a saída será "Diferentes":
+            Filme filme1 = new Filme("Avatar", 2009);
+            Filme filme2 = new Filme("Avatar", 2009);
+            
+            if (filme1 == filme2) {
+                System.out.println("Iguais");
+            } else {
+                System.out.println("Diferentes");
+            }
+            
             
             
             
@@ -159,6 +169,31 @@ public class Estudos {
         Sintaxe do for loop:
             for (int i = 0; i < VALOR; i++) {                        
             }    
+            
+        Sintaxe do for-each:
+            ArrayList<String> nomes = new ArrayList<>();
+            nomes.add("Jacqueline");
+            nomes.add("Paulo");
+            nomes.add("Suellen");
+            nomes.add("Emily");
+            
+            for (String nome : nomes) {
+                System.out.println(nome);
+            }
+            
+        Exemplo extra de instanceof usado para listas com objetos de classes diferentes: 
+            for(Titulo item : lista) {                                                   //SuperClass
+                System.out.println(“Nome: “ + item.getNome());                              
+                if (item instanceof Filme filme && filme.getClassificacao() > 2) {       //SubClass
+                    System.out.println(“Classificação: “ +filme.getClassificacao());
+                }
+            }
+        
+        A partir do Java 8 é possivel fazer assim (expressão lambda):
+            nomes.forEach(nome -> System.out.println(nome));
+            
+        Method Reference (ainda mais simplificado, forma reduzida de uma expressão lambda):
+            nomes.forEach(System.out::println);
         
         
         
