@@ -232,6 +232,23 @@ public class Estudos {
         
         
         
+        Construtor (método especial): usado para inicializar objetos quando são criados. Exemplo:
+            public class Carro extends SuperClass {              //Imaginemos que algo foi herdado de uma SuperClass.
+                private String marca;                                   
+                private String modelo;                                          
+                                                                    
+                // Construtor                                           
+                public Carro(int superVar1, int superVar2, String marca, String modelo) {
+                    super(var1, var2);                           //Isso aqui será usado se algo foi herdado da SuperClass. 
+                    this.marca = marca;                          //NÃO ESQUECER DO this.var = var
+                    this.modelo = modelo;                        //NÃO ESQUECER DO this.var = var
+                }
+            }
+    
+    
+        
+        
+        
         A partir do Java 10 é possível declarar variáveis com "var". O compilador infire automaticamente o tipo da variável com base no valor atribuído a ela.
         Exemplo: var numero = 10; //O compilardor vai atribuir int.
         
