@@ -279,6 +279,43 @@ public class Estudos {
                     this.modelo = modelo;                        //NÃO ESQUECER DO this.var = var
                 }
             }
+        
+        
+        Collections.sort(lista)    
+            
+        Interface Comparable e Comparator.
+        compareTo() sintaxe:        
+        
+            public class Titulo implements Comparable<Titulo> {                 //<Class>
+        
+            public int compareTo(Titulo outroTitulo) {
+                    return this.getNome().compareTo(outroTitulo.getNome());     //Comparando as Strings
+                }
+                
+        Comparator:
+            lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));       //Novo Comparator
+                
+                
+                
+            public int compareTo(Conta outraConta) {        //Isso é antigo, pesquisar melhor
+                if (this.numero < outraConta.numero) {
+                    return -1;                              //Vem antes
+            }                                               
+                if (this.numero > outraConta.numero) {      
+                    return 1;                               //Vem depois
+                }                                           
+                return 0;                                   //Igual
+            }
+            
+            public class TitularComparator implements Comparator {     //Comparator antigo também
+                public int compare(Conta conta, Conta outraConta) {
+                    return conta.getTitular().
+                            compareTo(outraConta.getTitular());
+                }
+            }
+            
+            TitularComparator comparator = new TitularComparator();
+                    Collections.sort(lista, comparator);
     
     
         
