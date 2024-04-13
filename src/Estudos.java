@@ -264,6 +264,15 @@ public class Estudos {
         
         Métodos muito utilizados: add(), size(), get(), toString().
         
+        Podemos declarar a variável de uma lista utilizando a interface List, ganhando com isso o polimorfismo com a flexibilidade de trocar facilmente a implementação sendo instanciada.
+        Exemplo: 
+            
+            List<String> minhaLista = new ArrayList<>();  // Usando ArrayList                                                                
+            minhaLista.add("ArrayList é flexível!");
+            
+            minhaLista = new LinkedList<>();              // Usando LinkedList
+            minhaLista.add("LinkedList é rápida!");
+        
         
         
         
