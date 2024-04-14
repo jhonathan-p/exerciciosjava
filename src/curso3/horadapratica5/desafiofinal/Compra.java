@@ -11,7 +11,6 @@ public class Compra extends Cartao implements Comparable<Compra> {
         super.setLimiteCartao(limiteCartao);
     }
 
-
     public String getDescricaoCompra() {
         return descricaoCompra;
     }
@@ -42,7 +41,6 @@ public class Compra extends Cartao implements Comparable<Compra> {
         }
     }
 
-
     public void mensagem(){
         Scanner scanner = new Scanner(System.in);
         String mensagem = """
@@ -63,8 +61,6 @@ public class Compra extends Cartao implements Comparable<Compra> {
         continuarComprando = scanner.nextInt();
         System.out.println();
     }
-
-
 
     @Override
     public String toString() {

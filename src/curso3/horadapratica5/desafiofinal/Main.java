@@ -29,7 +29,5 @@ public class Main {
         for (Compra o: compras) {
             System.out.println(o.getDescricaoCompra() + " | " + o.getValorCompra());
         }
-
-
     }
 }
