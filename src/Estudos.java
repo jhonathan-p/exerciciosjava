@@ -327,6 +327,15 @@ public class Estudos {
                     Collections.sort(lista, comparator);
     
     
+    
+        APIs
+        HttpClient, HttpRequest e HttpResponse. Gson.
+        
+        Existem algumas classes que são imutáveis por padrão, como por exemplo, as classes String, Integer, Boolean, entre outras.
+        Ao alterar seu valor, um novo objeto é criado e a variável é atualizada para referenciar esse novo objeto.
+        Exemplo:
+            String nome = “Maria”;
+            nome = “Alice”;
         
         
         
