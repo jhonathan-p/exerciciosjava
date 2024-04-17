@@ -325,11 +325,42 @@ public class Estudos {
             
             TitularComparator comparator = new TitularComparator();
                     Collections.sort(lista, comparator);
-    
-    
-    
+        
+        
+        
+        Sintaxe try-catch e finally:
+            try {
+              metodoQuePodeLancarExcecao();
+              System.out.println("Executou");
+            } catch (Exception e) {
+              System.out.println("Deu erro!");
+            } finally {                             //O finally vai ser executado dando erro ou não.
+              System.out.println("Finalizou!");
+            }
+        É possível ir cocando um catch em baixo do outro como se fosse else if.
+        A partir do Java 7 é possível fazer multi-catch exemplo:
+            } catch (NullPointerException | IllegalArgumentException e) {
+        Mas isso só é permitido se essas exceções não estiverem relacionadas por herança. Caso tenham relação de herança, cada uma deve ser tratada em seu próprio bloco catch separado.
+        
+        
         APIs
         HttpClient, HttpRequest e HttpResponse. Gson.
+        
+        A "Classe" Record é excelente para fazer json, ela já possui automaticamente todos os getters e setters, toString entre outros.        
+        Se você cria um record por exemplo:
+            public record Pessoa(String nome, int idade, String cidade) {}
+        Ao criar um objeto com ela, exemplo:
+            Pessoa pessoa = new Pessoa("João", 30, "São Paulo"); 
+            System.out.println(pessoa);                             //Caso queira conferir apenas o nome se usa pessoa.name() em vez de getName()
+        Esse é o console log: Pessoa[nome=João, idade=30, cidade=São Paulo]
+        Ao converter isso para json:
+            String json = gson.toJson(pessoa);
+            System.out.println(json);
+        Console log: {"nome":"João","idade":30,"cidade":"São Paulo"}
+        E ao desconverter:
+            Pessoa pessoaFromJson = gson.fromJson(json, Pessoa.class);      //Ao fazer um fromJson, usamos o Record.class como parametro para desserializar.
+            System.out.println(pessoaFromJson);
+        Console log: Pessoa[nome=João, idade=30, cidade=São Paulo]
         
         Existem algumas classes que são imutáveis por padrão, como por exemplo, as classes String, Integer, Boolean, entre outras.
         Ao alterar seu valor, um novo objeto é criado e a variável é atualizada para referenciar esse novo objeto.
