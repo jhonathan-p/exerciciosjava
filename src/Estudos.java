@@ -346,6 +346,34 @@ public class Estudos {
         APIs
         HttpClient, HttpRequest e HttpResponse. Gson.
         
+        Exemplo HttpCliente:
+            HttpClient client = HttpClient.newHttpClient();
+        
+        Exemplo HttpRequest, existe .GET, .POST e outros:
+            HttpRequest request = HttpRequest.newBuilder()
+            .header("Accept", "application/vnd.github+json") //Alterar header conforme necessário, ou então apaga se não precisar.
+            .header("Authorization", "Bearer " + key)
+            .header("X-GitHub-Api-Version", "2022-11-28")
+            .uri(URI.create(endereco))      //Endereço da API
+            .build();
+            
+        Exemplo HttpResponse:
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            String responseBody = response.body(); //isso não precisa mas facilita
+            
+        Exite o sendAsync que é meio diferente, estudar melhor como ele funciona:
+            client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
+            .thenApply(response -> response.body())
+            .thenAccept(body -> System.out.println(body));
+            Thread.sleep(3000); //Isso é só uma espera pois o código anterior vai terminar antes da resposta ser impressa.
+        
+        
+        Json bonitinho:
+            Gson gson = new GsonBuilder()
+            .setPrettyPrinting()     //isso aqui deixa ele bonitinho.
+            .create();
+                
+        
         A "Classe" Record é excelente para fazer json, ela já possui automaticamente todos os getters e setters, toString entre outros.        
         Se você cria um record por exemplo:
             public record Pessoa(String nome, int idade, String cidade) {}
@@ -367,6 +395,62 @@ public class Estudos {
         Exemplo:
             String nome = “Maria”;
             nome = “Alice”;
+            
+            
+            
+            
+        File, FileReader, FileWriter:
+            File file = new File("C:\\\\meuArquivo.txt");
+            FileReader reader = new FileReader(file);
+            
+            int data = reader.read();
+            while (data != -1) {
+                System.out.print((char) data);
+                data = reader.read();
+            }
+            reader.close();
+            
+            File file = new File("C:\\\\saida.txt");
+            FileWriter writer = new FileWriter(file);
+            writer.write("Olá, mundo!");
+            writer.close();
+            
+        Métodos úteis:
+        exists(): verifica se o arquivo ou diretório existe.
+        canRead(), canWrite(): verifica se é possível ler ou escrever no arquivo/diretório.
+        isDirectory(), isFile(): verifica se é um diretório ou arquivo.
+        mkdir(): cria um novo diretório.
+        delete(): deleta o arquivo ou diretório.
+            
+        BufferedReader e BufferedWriter: leitura e escrita eficientes, linha por linha.
+        FileInputStream e FileOutputStream: leitura e escrita de dados binários (imagens, áudio).
+        ObjectInputStream e ObjectOutputStream: leitura e escrita de objetos Java.
+        
+        A classe Scanner em Java permite ler dados de várias fontes, incluindo arquivos. Você pode usá-la para ler e imprimir o conteúdo de um arquivo linha por linha.
+        Exemplo:
+            import java.io.File;
+            import java.io.FileNotFoundException;
+            import java.util.Scanner;
+            
+            public class LeituraDeArquivo {
+                public static void main(String[] args) {
+                    try {
+                        File arquivo = new File("arquivo.json");
+                        Scanner scanner = new Scanner(arquivo);
+            
+                        while (scanner.hasNextLine()) {
+                            String linha = scanner.nextLine();
+                            System.out.println(linha);
+                        }
+            
+                        scanner.close();
+                    } catch (FileNotFoundException e) {
+                        System.out.println("Arquivo não encontrado!");
+                    }
+                }
+            }
+        
+        
         
         
         
@@ -376,8 +460,7 @@ public class Estudos {
         Limitações: 
         Não é possível utilizar var em variáveis cujo tipo não possa ser inferido automaticamente.                           
         Não é possível usar var em variáveis sem valor inicial. É necessário atribuir um valor à variável na mesma linha em que ela é declarada.
-        
-        
+               
         
 
         Nomes de classes devem começar com letra maiúscula e usar a convenção PascalCase (também conhecida como Upper CamelCase).
